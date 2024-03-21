@@ -80,21 +80,15 @@ Support both spawn & attach script to process.
 
 ## 📜 ChangeLog
 
-Version: 3.8
+Version: 3.9
 ```
 	[+] Add:
-		- Add function check.deviceConnected
-		- Add reFlutter
+		- Add backtrace to hooking.js
 	[+] Change:
-		- Update function check.iproxyInstalled
-		- Update dumpDecryptIPA option
+		- Update frida version
 		- Update readme, changelog, requirement
-		- Remove --list-appinfo option
-		- Update --cli option
 	[+] Fix
-		- Fix issue in --shell option [issue 57](https://github.com/noobpk/frida-ios-hook/issues/57)
-		- Fix issue in --dump option [issue 67](https://github.com/noobpk/frida-ios-hook/issues/67)
-		- Fix and optimize hexbytescan option
+		- Fix issue #85
 
 ```
 [See Full ChangeLog](https://github.com/noobpk/frida-ios-hook/blob/master/CHANGELOG.md)
@@ -111,13 +105,23 @@ Version: 3.8
 		git clone -b dev https://github.com/noobpk/frida-ios-hook
 ```
 
+## Environment
+
+```
+[+] Python >= v3.0 (Recommend to use pyenv or virtualenv)
+
+1. cd frida-ios-hook/
+2. python3 -m venv py-env
+3. source py-env/bin/active
+```
+
 ## Build
 
 ```
-1. cd frida-ios-hook/
-2. pip3 install -r requirements.txt
+1. pip3 install -r requirements.txt
 3. python3 setup.py
 4. cd frida-ios-hook
+5. ./ioshook -h (--help)
 ```
 
 ## Usage
